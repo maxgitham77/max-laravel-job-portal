@@ -16,7 +16,7 @@ return new class extends Migration
             $table->string('avatar')->default('/default/default.jpg');
             $table->string('firstname');
             $table->string('lastname');
-            $table->string('username');
+            $table->string('username')->nullable();
             $table->string('email')->unique();
             $table->timestamp('email_verified_at')->nullable();
             $table->enum('role', ['company', 'candidate'])->default('candidate');
